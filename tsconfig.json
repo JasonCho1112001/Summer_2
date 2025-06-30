@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "target": "es2022", // Or "esnext" for the latest features supported by your Node.js version
+    "module": "esnext", // THIS IS CRUCIAL: Tells TypeScript to output ES module syntax
+    "moduleResolution": "node", // How modules are resolved (Node.js-style)
+    "esModuleInterop": true, // Recommended for better compatibility when importing CommonJS packages
+    "forceConsistentCasingInFileNames": true,
+    "strict": true, // Good practice for type safety
+    "skipLibCheck": true, // Speeds up compilation by skipping type checking of declaration files
+    "outDir": "./dist", // Where compiled JS files will go (not directly used by ts-node, but good for builds)
+    "declaration": false, // Set to true if you want to generate .d.ts declaration files
+    "sourceMap": true // Generate source maps for easier debugging
+  },
+  "ts-node": {
+    "esm": true, // THIS IS CRUCIAL: Tells ts-node to enable ESM support
+    "experimentalResolver": true // Often helpful for ESM in ts-node with newer Node.js versions
+  },
+  "include": [
+    "./src/**/*.ts", // Assuming your source files are in a 'src' folder
+    "./*.ts" // Or if your files like Summer_1.ts are in the root
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
+}

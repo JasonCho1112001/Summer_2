@@ -2,7 +2,7 @@
   "name": "summer-research",
   "version": "1.0.0",
   "description": "",
-  "type": "commonjs",
+  "type": "module",
   "main": "Summer_1.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,6 +11,14 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "dotenv": "^16.5.0"
+    "@langchain/core": "^0.3.61",
+    "@langchain/google-genai": "^0.0.18",
+    "dotenv": "^16.5.0",
+    "zod": "^3.25.67"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.9",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.3"
   }
 }
